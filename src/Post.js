@@ -18,22 +18,22 @@ function Post({
     return (
         <div className="post">
             <div className="post__avatar">
-                <Avatar src="https://yt3.ggpht.com/ytc/AAUvwnjGeMLoQBRFODk5y4Dt8ScDhLi6acP8fvDzl6_CJQ=s900-c-k-c0x00ffffff-no-rj" />
+                <Avatar src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Anant Duhan <span className="post__headerSpecial">
-                                <VerifiedUserIcon className="post__badge"/> @duhan_anant
+                            {displayName}<span className="post__headerSpecial">
+                                {verified && <VerifiedUserIcon className="post__badge"/>} @{username}
                             </span>
                         </h3>
                     </div>
                     <div className="header__description">
-                        <p>I challenge you to become a SDE at top MNC</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://media.giphy.com/media/QNFhOolVeCzPQ2Mx85/giphy.gif" alt="" />
+                <img src={image} alt="" />
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
